@@ -82,7 +82,7 @@ Podemos modificar ese comportamiento con la propiedad de CSS overflow, o con alg
 > la pagina desarrollada.
   
   > + Referencias: 
-     [Lenguajecss.](https://lenguajecss.com/css/modelo-de-cajas/que-es/ )
-     [Programacion1class.](https://programacion1class.wordpress.com/3-5-modelo-de-caja/)
-     [Solvetic.](https://www.solvetic.com/tutoriales/article/581-el-modelo-de-caja-css/)
-     [Uniwebsidad.](https://uniwebsidad.com/libros/css/capitulo-4/margen-y-relleno)
+     [Lenguajecss.](https://lenguajecss.com/css/modelo-de-cajas/que-es/ )  
+     [Programacion1class.](https://programacion1class.wordpress.com/3-5-modelo-de-caja/)  
+     [Solvetic.](https://www.solvetic.com/tutoriales/article/581-el-modelo-de-caja-css/)  
+     [Uniwebsidad.](https://uniwebsidad.com/libros/css/capitulo-4/margen-y-relleno)  
