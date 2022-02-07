@@ -124,7 +124,7 @@ Desde 2016 podemos usar los nuevos valores flex e inline-flex en sustitución de
 > lenguajes de apoyo como: CSS, JavaScript, XML, etc.
 
 > + Referencias:
-> [FrancescRicart](https://francescricart.com/elementos-en-linea-elementos-bloque-elementos-inline-block/)
-> [Devloper.Morzilla.EnLinea](https://developer.mozilla.org/es/docs/Web/HTML/Inline_elements)
-> [Devloper.Morzilla.EnCaja](https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model)
-> [DiegocMartin](https://www.diegocmartin.com/modelo-de-cajas-y-posicionamiento-css/)
+> + [FrancescRicart](https://francescricart.com/elementos-en-linea-elementos-bloque-elementos-inline-block/)
+> + [Devloper.Morzilla.EnLinea](https://developer.mozilla.org/es/docs/Web/HTML/Inline_elements)
+> + [Devloper.Morzilla.EnCaja](https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model)
+> + [DiegocMartin](https://www.diegocmartin.com/modelo-de-cajas-y-posicionamiento-css/)
