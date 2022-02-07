@@ -50,3 +50,39 @@ obligando mediante CSS a tener un aspecto concreto.
 + Bottom: Se refiere a la parte inferior del elemento.
 + Center: En algunos casos se puede especificar el valor center para referirse a la posición central entre los  extremos horizontales o verticales.
 
+##Desbordamiento.
+Volvamos a pensar en la situación de la imagen anterior: Damos un tamaño de ancho y alto a un elemento HTML, pero su  contenido de texto es tan grande que no cabe dentro de ese elemento. ¿Qué ocurriría? Probablemente lo que vimos en la  imagen: el contenido se desbordaría.
+  
+    
+Podemos modificar ese comportamiento con la propiedad de CSS overflow, o con alguna de sus propiedades específicas  overflow-x o overflow-y:
+
+| Propiedades | Valor | Significado |
+|-------------|-------|-------------|
+| overflow | visible-hidden-scroll-auto | Establece el comportamiento de desbordamiento. |
+| overflow-x | visible-hidden-scroll-auto | Establece el desbordamiento sólo para el eje X (horizontal). |
+| overflow-y | visible-hidden-scroll-auto | Establece el desbordamiento sólo para el eje Y (vertical). |
+
+    
+| Valor | ¿Qué ocurre si se desborda el contenedor? | ¿Desbordamiento? |
+|-------|-------------------------------------------|------------------|
+| Visible | Se muestra el contenido que sobresale (comportamiento por defecto) | si |
+| hidden | Se oculta el contenido que sobresale | No |
+| Scroll | Se colocan barras de desplazamiento (horizontales y verticales). | No |
+| auto | Se colocan barras de desplazamiento (sólo las necesarias).| No |
+
+
+> + Conclusiones:  
+> El modelo de caja es una estructura desarrollada para  
+> dar forma y sentido al desarrollo web, brindado de esta  
+> manera un metodo donde cualquier etiqueta de **HTML**  
+> se considera y es manejada de una manera similar a una  
+> caja la cual se puede modificar su apariencia pero  
+> sirmpre mantiene la misma forma un rectangulo el cual se  
+> altera para mantener el estilo deseado o implementado en  
+> la pagina desarrollada.
+  
+  > + Referencias: 
+     [Lenguajecss.](https://lenguajecss.com/css/modelo-de-cajas/que-es/ )
+     [Programacion1class.](https://programacion1class.wordpress.com/3-5-modelo-de-caja/)
+     [Solvetic.](https://www.solvetic.com/tutoriales/article/581-el-modelo-de-caja-css/)
+     [Uniwebsidad.](https://uniwebsidad.com/libros/css/capitulo-4/margen-y-relleno)
