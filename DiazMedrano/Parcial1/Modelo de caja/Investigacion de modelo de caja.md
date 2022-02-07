@@ -26,7 +26,9 @@ La representación básica del modelo de cajas se basa en varios conceptos impor
 | Valor inicial | auto |
 | Descripción | Establece la anchura de un elemento |
 
-
+  
+  
+  
 | Propiedad | height |
 |-----------|-------|
 | Valores | unidad de medida - porcentaje - auto - inherit |
@@ -34,7 +36,17 @@ La representación básica del modelo de cajas se basa en varios conceptos impor
 | Valor inicial | auto |
 | Descripción | Establece la altura de un elemento |
 
-Hay que ser muy conscientes de que, sin indicar valores de ancho y alto para una caja, el elemento generalmente  
+Hay que ser muy conscientes de que, sin indicar valores de ancho y alto para una caja, el elemento generalmente 
 toma el tamaño que debe respecto a su contenido, mientras que si indicamos un ancho y alto concretos, estamos  
 obligando mediante CSS a tener un aspecto concreto.
+
+
+##Zonas de un elemento.
+![zonas de un elemento](https://lenguajecss.com/css/modelo-de-cajas/que-es/positions.png "imagen enlazada desde lenguajecss.com")
+
++ Top: Se refiere a la parte superior del elemento.
++ Left: Se refiere a la parte izquierda del elemento.
++ Right: Se refiere a la parte derecha del elemento.
++ Bottom: Se refiere a la parte inferior del elemento.
++ Center: En algunos casos se puede especificar el valor center para referirse a la posición central entre los  extremos horizontales o verticales.
 
