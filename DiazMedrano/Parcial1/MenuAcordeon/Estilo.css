@@ -18,6 +18,11 @@ ul > li > ul {
 ul > li:hover > ul {
     display: block;
     height: 100%;
+    transition: background-color 5s ease-in-out;
+}
+.opcion:hover {
+    background: rgb(130, 180, 245);
+    color: rgb(185, 105, 105);
 }
 
 .opcion {
@@ -30,3 +35,10 @@ ul > li:hover > ul {
     background: gray;
     color: white;
 }
+.subOpcion:hover {
+    padding-left: 20px;
+    background: rgb(6, 167, 46);
+    color: white;
+}
+
+

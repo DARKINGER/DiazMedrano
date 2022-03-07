@@ -1,0 +1,129 @@
+* {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+
+<!--InicioAreaDesplegable-->
+ul {
+  list-style: none;
+  position: fixed;
+  background-color:lightgray;
+  width: 200px;
+  height: 100%;
+  overflow: auto;
+}
+
+
+ul > li > ul {
+  display: none;
+}
+
+ul > li:hover > ul {
+  display: block;
+  height: 100%;
+}
+
+.opcion {
+  background: rgb(192, 41, 179);
+  color: white;
+}
+
+.subOpcion {
+  padding-left: 20px;
+  background: gray;
+  color: white;
+}
+<!--areaMenuDesplegable-->
+
+.subOpcion{
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+}
+
+
+div.sidebar {
+  position: fixed;
+  background-color:lightgray;
+  width: 200px;
+  height: 100%;
+  overflow: auto;
+}
+
+#opc1, #opc2 {
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+}
+
+a:hover {
+  background-color: blue;
+  color: white;
+}
+
+div.content {
+  background-color: cadetblue;
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1500px;
+}
+
+.contenidoOpcion { display: none; }
+
+#opcion1:target,
+#opcion2:target,
+#opcion3:target,
+#opcion4:target,
+#opcion5:target,
+#opcion6:target { display: block;}
+
+.direccion img{
+  text-decoration:none;
+}
+
+#cuadroRelato{
+  width: 500px;
+}
+#contNovedades{
+  width: 960px;
+}
+
+input {display: none;}
+
+input:checked + .sidebar{
+  width:0px;
+}
+
+input:checked ~ .content {
+  margin-left: 0px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  div.sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .sidebar #opc1, #opc2 {float: left;}
+
+  div.content {margin-left: 0;}
+  
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  .sidebar #opc1, #opc2 {
+    float: none;
+    text-align: center;
+  }
+}
