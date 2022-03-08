@@ -85,11 +85,16 @@ div.content {
 #cuadroRelato{
   width: 500px;
 }
+#Dir, #Pas{
+  width: 300px;
+  color: aliceblue;
+}
+
 #contNovedades{
   width: 960px;
 }
 
-input {display: none;}
+#toggle {display: none;}
 
 input:checked + .sidebar{
   width:0px;
