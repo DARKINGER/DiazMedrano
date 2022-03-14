@@ -21,5 +21,8 @@
 |flex-basis| Especifica el valor inicial del tamaño principal de un elemento flex. El valor por defecto es auto.| .item {  -webkit-flex-basis: auto;  -ms-flex-basis: auto;  flex-basis: auto;  (flex-basis: número / auto / initial / inherit;)  }|
 |flex| La forma abreviada para flex-grow, flex-shrink y flex-basis juntos. El valor por defecto es 0 1 auto.|.item {  -webkit-flex: 1;  -ms-flex: 1;  flex: 1;  (	flex: none / flex-grow [flex-shrink] [flex-basis]; )  }|
 |order| Se utiliza para cambiar el orden en el que aparecen los elementos individuales.| .item{  -webkit-order: 2;  -ms-order:2;  order: 2;  (order: número / initial / inherit;)}|
+  
+    
 
 > Los elementos flex tienen la capacidad de redimensionarse y recolocarse dentro de la caja flex con facilidad.  También tienen la capacidad de alinearse tanto horizontalmente como verticalmente y  todo esto puede ser muy interesante a la hora de diseñar páginas web adaptativas.
+> En el html se colocara una tabla de ejemplos sobre diversas aplicaciones. 
