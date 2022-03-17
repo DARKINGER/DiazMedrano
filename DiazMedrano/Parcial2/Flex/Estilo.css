@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    display: flex;
+    width: 100vw;
+    height: 100vw;
+    background-color: blueviolet;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.caja{
+    width: 100px;
+    height: 100px;
+    margin: 90px;
+    margin-top: 150px;
+    background-color: wheat;
+    transition: ease-in 2s ;
+}
+
+#caja1:hover{
+    width: 150px;
+    height: 200px;
+    margin: 50px;
+    padding-top: 75px;
+    background-color: rgb(37, 197, 63);
+    text-align: center;
+}
+
+@media screen and (max-width: 1130px) {
+    .caja {
+     margin: 20px;
+     margin-top: 10px;
+    }
+    #caja1{
+        align-self: flex-end;
+    }
+    .contenedor{
+        flex-direction: column;
+    }
+  }
