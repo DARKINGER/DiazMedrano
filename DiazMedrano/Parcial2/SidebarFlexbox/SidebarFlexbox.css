@@ -125,7 +125,6 @@ input:checked ~ .contenedorPadre .content {
     height: auto;
   }
 */
-
 #toggle {display: none;}
 
 input:checked + .contenedorPadre .sidebar{
@@ -144,11 +143,12 @@ input:checked ~ .contenedorPadre .content {
     background-color: rgb(65, 235, 136);
     width: 100%;
     height: auto;
+    padding-left: 330px;
 
   }
   .sidebar #opc1, #opc2 {
     margin: 20px;
-    float: left;
+    float:left;
     list-style: none;
     padding: 10px;
     margin: 10px;
