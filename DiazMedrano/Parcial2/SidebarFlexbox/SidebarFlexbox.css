@@ -165,7 +165,7 @@ input:checked ~ .contenedorPadre .content {
 
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   div.sidebar #opc1, #opc2 {
     float: none;
     text-align: center;
