@@ -1,0 +1,201 @@
+* {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+<!--InicioAreaDesplegable-->
+ul {
+  list-style: none;
+  position: fixed;
+  background-color:lightgray;
+  width: 200px;
+  height: 100%;
+  overflow: auto;
+}
+
+
+ul > li > ul {
+  display: none;
+  list-style: none;
+}
+
+ul > li:hover > ul {
+  display: block;
+  height: 100%;
+}
+
+.opcion {
+  list-style: none;
+  background: rgb(192, 41, 179);
+  color: white;
+}
+
+.subOpcion {
+  padding-left: 20px;
+  background: gray;
+  color: white;
+}
+<!--areaMenuDesplegable-->
+
+.subOpcion{
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+}
+
+/*adaptacion de flex*/
+.contenedorPadre{
+  display: flex;
+    width: 100vw;
+    height: 100vw;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+div.sidebar{  
+  background-color: aqua;
+  width: 15%;
+  height: 100%;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  background-color: blueviolet;
+}
+
+#opcion2{
+  margin-left: 20px;
+}
+
+#opc1, #opc2 {
+  list-style: none;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: blue;
+  color: white;
+}
+
+.contenidoOpcion { display: none; }
+
+#opcion1:target,
+#opcion2:target,
+#opcion3:target,
+#opcion4:target,
+#opcion5:target,
+#opcion6:target { display: block;}
+
+.direccion img{
+  text-decoration:none;
+}
+
+#cuadroRelato{
+  width: 500px;
+}
+#Dir, #Pas{
+  width: 300px;
+  color: aliceblue;
+}
+
+#contNovedades{
+  margin-top: 15px;
+  width: 940px;
+}
+
+#toggle {display: none;}
+
+input:checked + .contenedorPadre .sidebar{
+  width:0px;
+}
+
+input:checked ~ .contenedorPadre .content {
+  margin-left: 0px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+ /*
+  div.sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+*/
+
+#toggle {display: none;}
+
+input:checked + .contenedorPadre .sidebar{
+  height:0px;
+}
+
+input:checked ~ .contenedorPadre .content {
+  margin-top: 0px;
+}
+
+
+.contenedorPadre{
+  flex-direction: column;
+}
+  div.sidebar{  
+    background-color: rgb(65, 235, 136);
+    width: 100%;
+    height: auto;
+
+  }
+  .sidebar #opc1, #opc2 {
+    margin: 20px;
+    float: left;
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+
+  }
+  
+  .content{
+    width: 100%;
+    background-color: blueviolet;
+  }
+  
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+  div.sidebar #opc1, #opc2 {
+    float: none;
+    text-align: center;
+  }
+  
+  
+#toggle {display: none;}
+
+input:checked + .contenedorPadre .sidebar{
+  height:0px;
+}
+
+input:checked ~ .contenedorPadre .content {
+  margin-top: 0px;
+}
+
+
+.contenedorPadre{
+  flex-direction: column;
+}
+  div.sidebar{  
+    background-color: rgb(209, 32, 32);
+    width: 100%;
+    height: auto;
+
+  }
+  .content{
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+  }
+  
+}
