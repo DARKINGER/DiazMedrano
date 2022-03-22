@@ -34,16 +34,21 @@
   }
 
 #Seccion1{
-    padding-top: 60px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-top: 5%;
+    padding-left: 6%;
+    padding-right: 5%;
     text-align: center;
 }
 #Seccion3{
-    padding-top: 60px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-top: 5%;
+    padding-left: 6%;
+    padding-right: 5%;
     text-align: center;
+}
+
+ #Seccion2 #Red{
+  width: 100%;
+  height: 100%;
 }
 
   .Section{
@@ -63,4 +68,35 @@
     height: 100%;
     padding-top: 10px;
     background-color: mediumorchid;
+  }
+
+
+  @media screen and (max-width: 1300px) {
+   
+    .Content{
+      background-color: rgb(255, 251, 0);
+      height: 100%;
+      width: 100%;
+
+      grid-template-columns: 20% 60% 20%;
+      grid-template-rows: 10% 1000px 10%;
+      justify-content:center;
+      align-items: center;
+  }
+  
+  .Footer{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  #Seccion3{
+    grid-row-start:1;
+    grid-row-end: 4;
+    width: auto;
+    height: 100%;
+}
+.Header{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
   }
