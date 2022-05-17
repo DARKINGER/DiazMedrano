@@ -211,8 +211,9 @@ button{
                 solicitud.onreadystatechange = function(){
                   if(solicitud.readyState == 4 && solicitud.status == 200){
                     resolve(solicitud.responseText);
+                    console.log('Promesa');
                   }};
-                  solicitud.open("GET", "getHeader.txt", true);
+                  solicitud.open("GET", "practica_1.php", true);
                   solicitud.send();
               });
               promesa.then(value => document.getElementById("hora").innerHTML = value);
