@@ -189,6 +189,7 @@ button{
             
             
             document.getElementById("Fetch").addEventListener("click", function(){
+              /*
               let promesa = fetch('practica_1.php');
               promesa.then((respuesta) =>  respuesta.json() )
                       .then((Datos) => {console.log(Datos)
@@ -205,7 +206,23 @@ button{
               $('#IngresoMensual').val(Datos.Ingreso);
               $('#EgresoMensual').val(Datos.Egreso);
                       } );
-
+              */
+              fetch('practica_1.php')
+              .then((respuesta) =>  respuesta.json() )
+                      .then((Datos) => {console.log(Datos)
+              $('#NombreCliente').val(Datos.Nombre);
+              $('#PrimerApellido').val(Datos.PrimerApellido);
+              $('#SegundoApellido').val(Datos.SegundoApellido);
+              $('#dirCliente').val(Datos.Direccion);
+              $('#telCliente').val(Datos.Telefono);
+              $('#ciudad').val(Datos.ciudad);
+              $('#estado').val(Datos.estado);
+              $('#RFC').val(Datos.RF);
+              $('#RazonSocial').val(Datos.RazonSocial);
+              $('#TipoDocumento').val(Datos.TipDoc);
+              $('#IngresoMensual').val(Datos.Ingreso);
+              $('#EgresoMensual').val(Datos.Egreso);
+                      } );
 
             })
 
