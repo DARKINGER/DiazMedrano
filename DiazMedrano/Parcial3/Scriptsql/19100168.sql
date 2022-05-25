@@ -1,7 +1,7 @@
 
-create database NoControl_1910068;
+create database NoControl_19100618;
 
-use NoControl_1910068;
+use NoControl_19100168;
 
 create table persona
 (
