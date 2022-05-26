@@ -5,7 +5,7 @@ $Rfc=$_POST['RFC'];
 //$Rfc='Diaz';
 
 $hostname='localhost';
-$database='nocontrol_1910068';
+$database='nocontrol_19100168';
 $username='root';
 $password='1020';
 $port='3306';
