@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Bootstrap</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+  
+<style>
+
+h1{
+    margin: 15px;
+    margin-bottom: 20px;
+}
+
+div.contenedorFiscal{
+    border: 1px solid black ;
+    padding: 20px;
+    background-color: lightgray;
+}
+div.contenedorPersonal{
+    border: 1px solid black ;
+    padding: 20px;
+    background-color: lightgray;
+}
+button{
+    margin-top: 20px;
+}
+</style>
+
+</head>
+<body>
+    <div class="container">
+
+    <form class="form" name="Formulario">
+          
+         <div class="contenedorPersonal">
+
+            <center><h1>Datos personales generales</h1></center>
+
+            <div class="row">
+                <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                      <label for="NombreCliente" class="control-label">Nombre del cliente</label>
+                      <input id="NombreCliente" type="text" class="form-control" placeholder="Nombre del cliente"/>
+                </div>
+                <div class="form-group col-sm-12 col-md-8 col-lg-4">
+                      <label for="PrimerApellido">Primer apellido</label>
+                      <input id="PrimerApellido" type="text" class="form-control" placeholder="PrimerApellido"/>
+                </div>
+                <div class="form-group col-sm-12 col-md-8 col-lg-4">
+                  <label for="SegundoApellido">Segundo apellido</label>
+                  <input id="SegundoApellido" type="text" class="form-control" placeholder="SegundoApellido"/>
+                  </div>
+            </div>
+      
+            <div class="row">
+                <div class="form-group col-sm-12 col-md-8 col-lg-6">
+                      <label for="dirCliente">Direccion</label>
+                      <input id="dirCliente" type="text" class="form-control" placeholder="Calle Numero Colonia y Codigo Postal"/>
+                </div>
+                <div class="form-group col-sm-12 col-md-4 col-lg-6">
+                      <label for="telCliente">Telefono</label>
+                      <input id="telCliente" type="text" class="form-control" placeholder="(Lada)-Numero "/>
+                </div>
+            </div>
+      
+      
+            <div class="row">
+                  <div class="form-group col-sm-12 col-md-6 col-lg-4">
+                        <label for="ciudad">Ciudad</label>
+                        <input id="ciudad" type="text" class="form-control" placeholder="Nombre de la Ciudad"/>
+                  </div>
+                  <div class="form-group col-sm-12 col-md-6 col-lg-4">
+                        <label for="estado">Estado</label>
+                        <input id="estado" type="text" class="form-control" placeholder="Nombre del Estado"/>
+                  </div>
+            </div>
+
+         </div>
+      
+      <div class="contenedorFiscal">
+
+        <div class="Titular" id="TituloCambia">
+            <center><h1 id="hora">Datos Fiscales.</h1></center>
+        </div>
+      <div class="row">
+          <div class="form-group col-sm-12 col-md-12 col-lg-4">
+              <label for="RFC">RFC</label>
+              <input id="RFC" type="text" class="form-control" placeholder="RFC"/>
+        </div>
+        <div class="form-group col-sm-12 col-md-12 col-lg-8">
+          <label for="RazonSocial">Razon Social</label>
+          <input id="RazonSocial" type="text" class="form-control" placeholder="Persona natural o juridica"/>
+    </div>
+    </div>
+    <div class="row">
+
+      <div class="form-group col-sm-12 col-md-12 col-lg-4">
+          <label for="TipoDocumento">Tipo de documento</label>
+          <input id="TipoDocumento" type="text" class="form-control" placeholder="Tipo de documento solicitado"/>
+    </div>    
+
+    <div class="form-group col-sm-12 col-md-12 col-lg-4">
+      <label for="IngresoMensual">Ingreso mensual</label>
+      <input id="IngresoMensual" type="text" class="form-control" placeholder="$ Ingreso percibido mensualmente"/>
+</div>
+
+<div class="form-group col-sm-12 col-md-12 col-lg-4">
+    <label for="EgresoMensual">Egreso mensual</label>
+    <input id="EgresoMensual" type="text" class="form-control" placeholder="$ Egreso mensual"/>
+</div>
+
+    </div>
+
+
+
+
+
+      </div>
+
+      <button id="btn1" type="submit" class="btn btn-primary">Submit</button>
+      <button id="modal1" type="reset" class="btn btn-default">Modal</button>
+      <button id="Ajax" type="submit" class="btn btn-default" >Ajax</button>
+      <button id="Json" type="button" class="btn btn-primary" title="Obtiene Json">Json</button>
+      <button id="Promesa" type="button" class="btn btn-default" title="Obtiene Promesa">Json</button>
+      <button id="BD" type="button" class="btn btn-primary" title="BD">BD</button>
+
+
+
+    </form>
+
+
+    <div class="alert alert-primary" role="alert">
+        Alerta estandar
+      </div>
+    
+        <div class="alert alert-primary alert-dismissible collapse fade show" role="alert" id="alerta1">
+            <h1>Alerta</h1>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal" tabindex="-1" id="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Modal prueba formulario</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('#alerta1').show();
+            });
+            $('#btn2').click(function(){
+                $('#alerta1').hide();
+            });
+
+            $('#btn1').click(function(){
+                $('#alerta1').show();
+            });
+            $('#modal1').click(function(){
+                $('#modal').modal();
+            });
+            $('#Ajax').click(function(){
+              event.preventDefault();
+              ajaxFunction();
+            });
+
+            $('#Json').click(function(){
+              $.post('practica_1.php',{},function(data){
+
+              console.log(data);
+              $('#NombreCliente').val(data.Nombre);
+              $('#PrimerApellido').val(data.PrimerApellido);
+              $('#SegundoApellido').val(data.SegundoApellido);
+              $('#dirCliente').val(data.Direccion);
+              $('#telCliente').val(data.Telefono);
+              $('#ciudad').val(data.ciudad);
+              $('#estado').val(data.estado);
+              $('#RFC').val(data.RF);
+              $('#RazonSocial').val(data.RazonSocial);
+              $('#TipoDocumento').val(data.TipDoc);
+              $('#IngresoMensual').val(data.Ingreso);
+              $('#EgresoMensual').val(data.Egreso);
+              },'json');
+            });
+
+////////////////////////////////////////////////////////////////////////////////
+            $('#BD').click(function() {
+              let RFC1=prompt('Teclee el RFC a consultar');
+              //console.log('click')
+              /*
+              $.post('con2.php',{RFC:RFC1},function(dato){
+              CargarConsulta(dato);
+                //console.log('entra');
+              },'json');
+              */
+
+              $.post('con2.php',{RFC:RFC1},function(datare){
+              refrescar(datare);
+              //CargarConsulta(datare);
+              },'json');
+              console.log('culmina');
+              
+            });
+
+
+            function CargarConsulta(objeto) {
+              console.log('si entra a funcion')
+              console.log(objeto);
+              $('#NombreCliente').val(objeto.Nombre);
+              $('#PrimerApellido').val(objeto.PrimerApellido);
+              $('#SegundoApellido').val(objeto.SegundoApellido);
+              $('#dirCliente').val(objeto.Direccion);
+              $('#telCliente').val(objeto.Telefono);
+              $('#ciudad').val(objeto.ciudad);
+              $('#estado').val(objeto.estado);
+              $('#RFC').val(objeto.RF);
+              $('#RazonSocial').val(objeto.RazonSocial);
+              $('#TipoDocumento').val(objeto.TipDoc);
+              $('#IngresoMensual').val(objeto.Ingreso);
+              $('#EgresoMensual').val(objeto.Egreso);
+            }
+
+            function refrescar(objeto) {
+              console.log(objeto);
+              $('#NombreCliente').val(objeto.nombre);
+              $('#PrimerApellido').val(objeto.PrimerApellido);
+              $('#SegundoApellido').val(objeto.SegundoApellido);
+              $('#dirCliente').val(objeto.Direccion);
+              $('#telCliente').val(objeto.Telefono);
+              $('#ciudad').val(objeto.ciudad);
+              $('#estado').val(objeto.Estado);
+              $('#RFC').val(objeto.RFC);
+              $('#RazonSocial').val(objeto.RazonSocial);
+              $('#TipoDocumento').val(objeto.TipoDocumento);
+              $('#IngresoMensual').val(objeto.IngresoMensual);
+              $('#EgresoMensual').val(objeto.EgresoMensual);
+      }
+
+            
+//////////////////////////////////////////////////////////////
+
+
+
+            $('#Promesa').click(function(){
+              let promesa = new Promise(function(resolve, reject){
+                var solicitud = new XMLHttpRequest();
+                solicitud.onreadystatechange = function(){
+                  if(solicitud.readyState == 4 && solicitud.status == 200){
+                    resolve(solicitud.responseText);
+                    console.log('Promesa');
+                  }};
+                  solicitud.open("GET", "practica_1.php", true);
+                  solicitud.send();
+              });
+              promesa.then(value => document.getElementById("hora").innerHTML = value);
+            });
+
+        });
+       
+       
+        
+
+            function ajaxFunction() {
+var ajaxRequest;
+ajaxRequest = new XMLHttpRequest();
+
+
+ajaxRequest.onreadystatechange = function() {
+    if (ajaxRequest.readyState == 4)                               
+    { 
+      document.getElementById("hora").innerHTML = ajaxRequest.responseText;
+      
+    } 
+};
+
+ajaxRequest.open("GET","practica_1.php",true);  
+ajaxRequest.send();                                  
+}
+
+
+ 
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
+
+
+
