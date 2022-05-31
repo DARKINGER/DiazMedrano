@@ -148,7 +148,7 @@ button{
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Modal body text goes here.</p>
+                  <p id="texto">Modal body text goes here.</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -173,7 +173,8 @@ button{
                 $('#alerta1').show();
             });
             $('#modal1').click(function(){
-                $('#modal').modal();
+              jQuery ("#texto").text("Hola mundo");
+              $('#modal').modal();
             });
 
 

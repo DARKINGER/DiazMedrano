@@ -127,17 +127,40 @@ button{
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Modal prueba formulario</h5>
+              <h5 id="ModalAdv"> </h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>M</p>
+              <p id="texto">M</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" tabindex="-1" id="modal-entrada">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="Cabeza">Consultar RFC</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" >
+                <p id="Cuerpo"></p>
+                <form id="FormularioModal">
+                    <label for="ConsultaRFC">RFC a consultar</label>
+                    <input id="ConsultaRFC" type="text" class="form-control" name="ConsultaRFC" placeholder="RFC"/>
+                </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-primary" id="BD-Consultar" data-dismiss="modal">Consultar</button>
             </div>
           </div>
         </div>

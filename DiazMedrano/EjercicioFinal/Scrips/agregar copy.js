@@ -30,26 +30,31 @@ $(document).ready(function(){
             //console.log(datos.get('Egreso'));
             
             let RFC1=(datos.get('RFC'));
-            alert(RFC1);
+            //alert(RFC1);
             $.post('./Scrips/php/Mostrar.php',{RFC:RFC1},function(datare){
                 if(datare == 'false' || datare == false){
                     
-                    fetch('./Scrips/php/Agregar.php',{
-                        method: 'POST',
+                fetch('./Scrips/php/Agregar.php',{
+                method: 'POST',
                 body: datos
             })
             .then((res) => res.json())
             .then((data) => {
-                
-                console.log(data);
-                alert(data);
+                //alert(data);
                 RFCactual = $('#RFC').val();
+                jQuery ("#texto").text(data+"la persona con RFC: "+RFCactual);
+                jQuery ("#ModalAdv").text("Aviso");
+                $("#modal").modal();
+                //console.log(data);
                 //location.reload();
             });
             //alert('Almacenado correctamente');
             
         }else{
-            alert('La RFC ya esta en uso si deseas modificarla pulsa el boton de modificar');
+            jQuery ('La RFC ya esta en uso si deseas modificarla pulsa el boton de modificar');
+            jQuery ("#ModalAdv").text("Aviso");
+            $("#modal").modal();
+            //alert('La RFC ya esta en uso si deseas modificarla pulsa el boton de modificar');
             
         }
         RFCactual = (datos.get('RFC'));

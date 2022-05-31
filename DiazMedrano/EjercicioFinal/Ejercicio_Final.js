@@ -2,7 +2,24 @@
 
 $(document).ready(function(){
 
+  $('#BD-Consultar').click(function() {
+    //ConsultaRFC
+    let RFC1 = $('#ConsultaRFC').val();
 
+    $.post('./Scrips/php/Mostrar.php',{RFC:RFC1},function(datare){
+      if(datare == false || datare == 'false'){
+        jQuery ("#texto").text("El RFC no existe en la BD");
+        jQuery ("#ModalAdv").text("Aviso");
+        $("#modal").modal();
+        Limpiar();
+      }
+      refrescar(datare);
+      RFCactual = $('#RFC').val();
+      console.log(RFCactual);
+    },'json');
+
+  });
+  
 ///////////////////////////////////////////////////////////////////////////////
 //                    Funcion para limpiar                                     //
 ///////////////////////////////////////////////////////////////////////////////
@@ -37,7 +54,10 @@ $('#Eliminar-BD').click(function() {
   //$('#RFC').val(datos.RFC);
   let RFC1 = RFCactual; 
   $.post('./Scrips/php/Elim.php',{RFC3:RFC1},function(datare){
-    alert(datare);
+          jQuery ("#texto").text(datare+"la persona con RFC: "+RFCactual);
+          jQuery ("#ModalAdv").text("Aviso");
+          $("#modal").modal();
+    //alert(datare);
     Limpiar();
     //location.reload();
   });
@@ -46,22 +66,7 @@ $('#Eliminar-BD').click(function() {
 //                    Botno para consultrar                                  //
 ///////////////////////////////////////////////////////////////////////////////
     $('#BD').click(function() {
-      //location.reload();
-      //let datos = new FormData(FormularioB);
-      let RFC1=prompt('Teclee el RFC a consultar');
-      //RFCactual = (datos.get('RFC'));
-      
-      $.post('./Scrips/php/Mostrar.php',{RFC:RFC1},function(datare){
-        if(datare == false){
-          alert('El RFC no existe en la BD');
-          Limpiar();
-          //location.reload();
-        }
-        refrescar(datare);
-        RFCactual = $('#RFC').val();
-        console.log(RFCactual);
-      },'json');
-      //console.log('culmina');
+     $("#modal-entrada").modal();
     });
     
     function refrescar(objeto) {
@@ -82,6 +87,7 @@ $('#Eliminar-BD').click(function() {
 
     
 //////////////////////////////////////////////////////////////
+//<h5 class="modal-title">Modal prueba formulario</h5>
 
 });
 
