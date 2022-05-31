@@ -1,78 +1,69 @@
+//mandar todo desde el formulario sin recargar
+
 $(document).ready(function(){
-    $('#btn1').click(function(){
-        $('#alerta1').show();
-    });
-    $('#btn2').click(function(){
-        $('#alerta1').hide();
-    });
 
-    $('#btn1').click(function(){
-        $('#alerta1').show();
-    });
-    $('#modal1').click(function(){
-        $('#modal').modal();
-    });
-    $('#Ajax').click(function(){
-      event.preventDefault();
-      ajaxFunction();
-    });
 
-    $('#Json').click(function(){
-      $.post('practica_1.php',{},function(data){
+///////////////////////////////////////////////////////////////////////////////
+//                    Funcion para limpiar                                     //
+///////////////////////////////////////////////////////////////////////////////
 
-      console.log(data);
-      $('#NombreCliente').val(data.Nombre);
-      $('#PrimerApellido').val(data.PrimerApellido);
-      $('#SegundoApellido').val(data.SegundoApellido);
-      $('#dirCliente').val(data.Direccion);
-      $('#telCliente').val(data.Telefono);
-      $('#ciudad').val(data.ciudad);
-      $('#estado').val(data.estado);
-      $('#RFC').val(data.RF);
-      $('#RazonSocial').val(data.RazonSocial);
-      $('#TipoDocumento').val(data.TipDoc);
-      $('#IngresoMensual').val(data.Ingreso);
-      $('#EgresoMensual').val(data.Egreso);
-      },'json');
-    });
+  function Limpiar(){
+    $('#NombreCliente').val("");
+    $('#PrimerApellido').val("");
+    $('#SegundoApellido').val("");
+    $('#dirCliente').val("");
+    $('#telCliente').val("");
+    $('#ciudad').val("");
+    $('#estado').val("");
+    $('#RFC').val("");
+    $('#RazonSocial').val("");
+    $('#TipoDocumento').val("");
+    $('#IngresoMensual').val("");
+    $('#EgresoMensual').val("");
+  }
+///////////////////////////////////////////////////////////////////////////////
+//                    Botno para limpiar                                     //
+///////////////////////////////////////////////////////////////////////////////
+
+$('#Limpiar-BD').click(function() {
+  Limpiar();
+});
 
 ////////////////////////////////////////////////////////////////////////////////
+//    Boton para eliminar                                                    //
+///////////////////////////////////////////////////////////////////////////////
+$('#Eliminar-BD').click(function() {
+  //let datos = new FormData(FormularioB);
+  //$('#RFC').val(datos.RFC);
+  let RFC1 = RFCactual; 
+  $.post('./Scrips/php/Elim.php',{RFC3:RFC1},function(datare){
+    alert(datare);
+    Limpiar();
+    //location.reload();
+  });
+});
+///////////////////////////////////////////////////////////////////////////////
+//                    Botno para consultrar                                  //
+///////////////////////////////////////////////////////////////////////////////
     $('#BD').click(function() {
+      //location.reload();
+      //let datos = new FormData(FormularioB);
       let RFC1=prompt('Teclee el RFC a consultar');
-      //console.log('click')
-      /*
-      $.post('con2.php',{RFC:RFC1},function(dato){
-      CargarConsulta(dato);
-        //console.log('entra');
-      },'json');
-      */
-
-      $.post('con2.php',{RFC:RFC1},function(datare){
-      refrescar(datare);
-      //CargarConsulta(datare);
-      },'json');
-      console.log('culmina');
+      //RFCactual = (datos.get('RFC'));
       
+      $.post('./Scrips/php/Mostrar.php',{RFC:RFC1},function(datare){
+        if(datare == false){
+          alert('El RFC no existe en la BD');
+          Limpiar();
+          //location.reload();
+        }
+        refrescar(datare);
+        RFCactual = $('#RFC').val();
+        console.log(RFCactual);
+      },'json');
+      //console.log('culmina');
     });
-
-
-    function CargarConsulta(objeto) {
-      console.log('si entra a funcion')
-      console.log(objeto);
-      $('#NombreCliente').val(objeto.Nombre);
-      $('#PrimerApellido').val(objeto.PrimerApellido);
-      $('#SegundoApellido').val(objeto.SegundoApellido);
-      $('#dirCliente').val(objeto.Direccion);
-      $('#telCliente').val(objeto.Telefono);
-      $('#ciudad').val(objeto.ciudad);
-      $('#estado').val(objeto.estado);
-      $('#RFC').val(objeto.RF);
-      $('#RazonSocial').val(objeto.RazonSocial);
-      $('#TipoDocumento').val(objeto.TipDoc);
-      $('#IngresoMensual').val(objeto.Ingreso);
-      $('#EgresoMensual').val(objeto.Egreso);
-    }
-
+    
     function refrescar(objeto) {
       console.log(objeto);
       $('#NombreCliente').val(objeto.nombre);
@@ -92,43 +83,12 @@ $(document).ready(function(){
     
 //////////////////////////////////////////////////////////////
 
-
-
-    $('#Promesa').click(function(){
-      let promesa = new Promise(function(resolve, reject){
-        var solicitud = new XMLHttpRequest();
-        solicitud.onreadystatechange = function(){
-          if(solicitud.readyState == 4 && solicitud.status == 200){
-            resolve(solicitud.responseText);
-            console.log('Promesa');
-          }};
-          solicitud.open("GET", "practica_1.php", true);
-          solicitud.send();
-      });
-      promesa.then(value => document.getElementById("hora").innerHTML = value);
-    });
-
 });
 
 
 
 
-    function ajaxFunction() {
-var ajaxRequest;
-ajaxRequest = new XMLHttpRequest();
-
-
-ajaxRequest.onreadystatechange = function() {
-if (ajaxRequest.readyState == 4)                               
-{ 
-document.getElementById("hora").innerHTML = ajaxRequest.responseText;
-
-} 
-};
-
-ajaxRequest.open("GET","practica_1.php",true);  
-ajaxRequest.send();                                  
-}
+ 
 
 
 

@@ -8,7 +8,9 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-  <script src="Ejercicio_Final.js"></script>
+  <script src="./Ejercicio_Final.js"></script>
+  <script src="./Scrips/agregar copy.js"></script>
+  <script src="./Scrips/modificar.js"></script>
 <style>
 
 h1{
@@ -35,7 +37,7 @@ button{
 <body>
     <div class="container">
 
-    <form class="form" name="Formulario">
+    <form class="form" name="Formulario" id="Formularioo">
           
          <div class="contenedorPersonal">
 
@@ -44,26 +46,26 @@ button{
             <div class="row">
                 <div class="form-group col-sm-12 col-md-4 col-lg-4">
                       <label for="NombreCliente" class="control-label">Nombre del cliente</label>
-                      <input id="NombreCliente" type="text" class="form-control" placeholder="Nombre del cliente"/>
+                      <input id="NombreCliente" type="text" class="form-control" name="Nombre" placeholder="Nombre del cliente"/>
                 </div>
                 <div class="form-group col-sm-12 col-md-8 col-lg-4">
                       <label for="PrimerApellido">Primer apellido</label>
-                      <input id="PrimerApellido" type="text" class="form-control" placeholder="PrimerApellido"/>
+                      <input id="PrimerApellido" type="text" class="form-control" name="1Apellido" placeholder="PrimerApellido"/>
                 </div>
                 <div class="form-group col-sm-12 col-md-12 col-lg-4">
                   <label for="SegundoApellido">Segundo apellido</label>
-                  <input id="SegundoApellido" type="text" class="form-control" placeholder="SegundoApellido"/>
+                  <input id="SegundoApellido" type="text" class="form-control" name="2Apellido" placeholder="SegundoApellido"/>
                   </div>
             </div>
       
             <div class="row">
                 <div class="form-group col-sm-12 col-md-8 col-lg-6">
                       <label for="dirCliente">Direccion</label>
-                      <input id="dirCliente" type="text" class="form-control" placeholder="Calle Numero Colonia y Codigo Postal"/>
+                      <input id="dirCliente" type="text" class="form-control" name="dirClientes" placeholder="Calle Numero Colonia y Codigo Postal"/>
                 </div>
                 <div class="form-group col-sm-12 col-md-4 col-lg-6">
                       <label for="telCliente">Telefono</label>
-                      <input id="telCliente" type="text" class="form-control" placeholder="(Lada)-Numero "/>
+                      <input id="telCliente" type="text" class="form-control" name="telClientes" placeholder="(Lada)-Numero "/>
                 </div>
             </div>
       
@@ -71,11 +73,11 @@ button{
             <div class="row">
                   <div class="form-group col-sm-12 col-md-6 col-lg-6">
                         <label for="ciudad">Ciudad</label>
-                        <input id="ciudad" type="text" class="form-control" placeholder="Nombre de la Ciudad"/>
+                        <input id="ciudad" type="text" class="form-control" name="Ciudadcliente" placeholder="Nombre de la Ciudad"/>
                   </div>
                   <div class="form-group col-sm-12 col-md-6 col-lg-6">
                         <label for="estado">Estado</label>
-                        <input id="estado" type="text" class="form-control" placeholder="Nombre del Estado"/>
+                        <input id="estado" type="text" class="form-control" name="EstadoCliente" placeholder="Nombre del Estado"/>
                   </div>
             </div>
 
@@ -89,28 +91,28 @@ button{
       <div class="row">
           <div class="form-group col-sm-12 col-md-12 col-lg-5">
               <label for="RFC">RFC</label>
-              <input id="RFC" type="text" class="form-control" placeholder="RFC"/>
+              <input id="RFC" type="text" class="form-control" name="RFC" placeholder="RFC"/>
         </div>
         <div class="form-group col-sm-12 col-md-12 col-lg-7">
           <label for="RazonSocial">Razon Social</label>
-          <input id="RazonSocial" type="text" class="form-control" placeholder="Persona natural o juridica"/>
+          <input id="RazonSocial" type="text" class="form-control" name="Razon" placeholder="Persona natural o juridica"/>
     </div>
     </div>
     <div class="row">
 
       <div class="form-group col-sm-12 col-md-12 col-lg-4">
           <label for="TipoDocumento">Tipo de documento</label>
-          <input id="TipoDocumento" type="text" class="form-control" placeholder="Tipo de documento solicitado"/>
+          <input id="TipoDocumento" type="text" class="form-control" name="Tipo" placeholder="Tipo de documento solicitado"/>
     </div>    
 
     <div class="form-group col-sm-12 col-md-12 col-lg-4">
       <label for="IngresoMensual">Ingreso mensual</label>
-      <input id="IngresoMensual" type="text" class="form-control" placeholder="$ Ingreso percibido mensualmente"/>
+      <input id="IngresoMensual" type="text" class="form-control"name="Ingreso" placeholder="$ Ingreso percibido mensualmente"/>
 </div>
 
 <div class="form-group col-sm-12 col-md-12 col-lg-4">
     <label for="EgresoMensual">Egreso mensual</label>
-    <input id="EgresoMensual" type="text" class="form-control" placeholder="$ Egreso mensual"/>
+    <input id="EgresoMensual" type="text" class="form-control" name="Egreso" placeholder="$ Egreso mensual"/>
 </div>
 
     </div>
@@ -120,10 +122,42 @@ button{
 
 
       </div>
-      <center>
-          <button id="BD" type="button" class="btn btn-primary" title="BD">Peticion a BD por php</button>
-        </center>
 
+      <div class="modal" tabindex="-1" id="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal prueba formulario</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>M</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div> 
+        <center>
+            <button id="BD" type="button" class="btn btn-primary" title="BD">Peticion a BD por php</button>
+            <button id="Insert-BD" type="button" class="btn btn-success" title="BD-Insert">Agregar a BD por php</button>
+            <button id="Eliminar-BD" type="button" class="btn btn-danger" title="BD-Eliminar">Eliminar en la BD por php</button>
+            <button id="Modificar-BD" type="button" class="btn btn-warning" title="BD-Modificar">Modificar en la BD por php</button>
+        </center>  
+        <br>
+        <center>
+            <button id="Limpiar-BD" type="button" class="btn btn-primary" title="BD-Limpiar">Limpiar formulario</button>
+        </center>  
+      </div>
+
+      
 
 
     </form>
