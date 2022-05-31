@@ -66,7 +66,8 @@ $('#Eliminar-BD').click(function() {
 //                    Botno para consultrar                                  //
 ///////////////////////////////////////////////////////////////////////////////
     $('#BD').click(function() {
-     $("#modal-entrada").modal();
+      $('#ConsultaRFC').val("");
+      $("#modal-entrada").modal();
     });
     
     function refrescar(objeto) {
